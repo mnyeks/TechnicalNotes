@@ -5,7 +5,7 @@ var smarties = [{ color : "white", qty : 5},
     { color : "yellow", qty : 1},
     { color : "red", qty : 11},
     { color : "black", qty : 13},
-    { color : "yellow", qty : 10},
+    // { color : "yellow", qty : 10},
     { color : "blue", qty : 19},
     { color : "brown", qty : 15}];
 
@@ -17,7 +17,11 @@ var smarties = [{ color : "white", qty : 5},
 
 test("how many orange smarties do we have?", function(assert){
     var smarty = findSmartiesByColor(smarties, "orange");
-    assert.equal(smarty.qty, 9);
+    assert.equal(smarty.qty, 17);
+});
+test("how many blue smarties do we have?", function(assert){
+    var smarty = findSmartiesByColor(smarties, "blue");
+    assert.equal(smarty.qty, 30);
 });
 
 test("find color of smarties we have the most of", function(assert){
@@ -27,7 +31,7 @@ test("find color of smarties we have the most of", function(assert){
 
 test("find all the smarties we have less than 7 for", function(assert){
     var smartieList = findSmartiesLessThan(smarties, 7);
-    assert.equal(smarties.length, 3);
+    assert.equal(smartieList.length, 3);
 });
 
 test("can I search smarties using a function", function(assert){
