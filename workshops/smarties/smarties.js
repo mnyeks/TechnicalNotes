@@ -42,17 +42,17 @@ var findSmartiesLessThan = function(smarties,limit){
 
 };
 
-// var findSmarties = function(smarties){
-// 	// var smarties = smarties;
-// 	// var smarty = {color:"", qty:0}
-// 	// console.log(smarties)
-// 	// for (var i = 0; i <= smarties.length; i++) {
-// 	// 	consosmarties[i])
+var findSmarties = function(smarties){
+	var smarties = smarties;
+	var smarty = {color:"", qty:0}
+	console.log(smarties)
+	for(var i = 0; i < smarties.length; i++) {
+		consosmarties[i])
 
-// 	// };
+	};
 
-// 	// return smart
-// };
+	return smart;
+};
 
 var groupSmarties = function(smartyList){
 	var smartyMap = {};

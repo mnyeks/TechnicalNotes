@@ -33,19 +33,18 @@ test("find all the smarties we have less than 7 for", function(assert){
     assert.equal(smartieList.length, 3);
 });
 
-// test("can I search smarties using a function", function(assert){
-//     assert.equal(true, false);
+test("can I search smarties using a function", function(assert){
 
-//     var smarties = findSmarties(smarties, function(smarty){
-//         return smarty.qty % 2 === 0;
-//     });
+    var smartieList = findSmarties(smarties, function(smarty){
+        return smarty.qty % 2 === 0;
+    });
 
-//     assert.deepEqual(smarties, {
-//         pink : 6,
-//         yellow : 10
-//     })
+    assert.deepEqual(smartieList, [
+        { color : "pink", qty : 6},
+            { color : "yellow", qty : 10}
+    ])
 
-// });
+});
 
 test("can I group smarties", function(assert){
     var smartieGroups = groupSmarties(smartyList);
@@ -68,6 +67,22 @@ test("can I group smarties", function(assert){
 // });
 
 // test("can I do an control break?", function(assert){
-//     addTotalForTeams()
-//     assert.equal(true, false);
+//     var goals = [
+//         { team : "Man U", goals : 1 },
+//         { team : "Man U", goals : 2 },
+//         { team : "Man U", goals : 1 },
+//         { team : "Arsenal", goals : 1 },
+//         { team : "Arsenal", goals : 1 },
+//         { team : "Arsenal", goals : 3 },
+//         { team : "Chelsea", goals : 0 },
+//         { team : "Chelsea", goals : 1 },
+//         { team : "Chelsea", goals : 0 },
+//     ];
+
+//     var teamsWithTotal = addTotalForTeams(goals);
+
+//     assert.deepEqual(teamsWithTotal[3], { team : "Man U", total : 4 });
+//     assert.deepEqual(teamsWithTotal[7], { team : "Arsenal", total : 5 });
+//     assert.deepEqual(teamsWithTotal[3], { team : "Chelsea", total : 1 });
+
 // });
