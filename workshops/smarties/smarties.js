@@ -42,33 +42,37 @@ var findSmartiesLessThan = function(smarties,limit){
 
 };
 
-var findSmarties = function(smarties){
-	var smarties = smarties;
-	var smarty = {color:"", qty:0}
-	console.log(smarties)
-	for(var i = 0; i < smarties.length; i++) {
-		consosmarties[i])
+var findSmarties = function(smarties, func){
+	var smartieList =[];
+	//func(smarties[i]);
+	for(var i=0; i < smarties.length; i++){
+		 var smarty = smarties[i];
+		// func(smarty);
+	 if(func(smarty)){
+	 	//func(smarty)
+	 	smartieList.push(smarty);
 
-	};
-
-	return smart;
-};
-
-var groupSmarties = function(smartyList){
-	var smartyMap = {};
-	
-	for(var key in smartyList){
-	var smarty = smartyList[key];
-	
-		if(smartyMap[smarty.color] == undefined){
-			smartyMap[smarty.color] =0;
-		} 
-		smartyMap[smarty.color] = smartyMap[smarty.color] + 1;
+	 }
 
 	}
-	console.log(smartyMap);
-	return smartyMap;
+	return smartieList;
 };
+
+// var groupSmarties = function(smartyList){
+// 	var smartyMap = {};
+	
+// 	for(var key in smartyList){
+// 	var smarty = smartyList[key];
+	
+// 		if(smartyMap[smarty.color] == undefined){
+// 			smartyMap[smarty.color] =0;
+// 		} 
+// 		smartyMap[smarty.color] = smartyMap[smarty.color] + 1;
+
+// 	}
+// 	console.log(smartyMap);
+// 	return smartyMap;
+// };
 
 // var sortSmarties = function(){
 
